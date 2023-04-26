@@ -5,6 +5,8 @@
   padding: 0;
   margin: 0;
   padding-top: 70px;
+  font-family: "Istok Web", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 .card {
   max-width: 350px;
@@ -45,15 +47,19 @@
   padding: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  grid-auto-flow: column;
   align-items: center;
 }
 .card__plan-icon {
   width: 45px;
   height: auto;
+  grid-area: icon;
 }
 .card__link-change {
-  justify-self: flex-end;
+  margin-left: auto;
+}
+.card__plan-info {
+  margin: 0 0 0 20px;
 }
 .card__plan-name {
   margin: 0;
@@ -62,4 +68,13 @@
 .card__plan-price {
   margin: 0;
   padding: 0;
+}
+.card__button {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px 0 0 0;
+  width: 100%;
+  border: none;
+  background-color: #382ae1;
+  color: white;
 }
