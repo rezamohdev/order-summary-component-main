@@ -4,9 +4,21 @@
   background-color: #e0e8ff;
   padding: 0;
   margin: 0;
-  padding-top: 70px;
-  font-family: "Istok Web", sans-serif;
-  font-family: "Ubuntu", sans-serif;
+  padding-top: 50px;
+  font-family: "Noto sans", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+.page::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url(./images/pattern-background-desktop.svg) no-repeat;
+  background-position: top -50% left 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .card {
   max-width: 350px;
@@ -15,7 +27,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 1px 18px 1px #0000001f;
 }
@@ -26,7 +38,7 @@
 }
 .card__body {
   margin: 0;
-  padding: 40px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,19 +48,28 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  color: #1c2d4b;
+  font-size: 24px;
 }
 .card__description {
   text-align: center;
-  margin: 0;
+  margin: 0 0 0 0;
   padding: 0;
+  width: 100%;
+  text-align: center;
+  color: #788395;
+  font-size: 13px;
+  line-height: 1.6;
 }
 .card__plan {
   margin: 0;
-  padding: 0;
+  padding: 10px 18px;
   width: 100%;
   display: flex;
   grid-auto-flow: column;
   align-items: center;
+  background-color: #f8f9fe;
+  border-radius: 10px;
 }
 .card__plan-icon {
   width: 45px;
@@ -57,6 +78,14 @@
 }
 .card__link-change {
   margin-left: auto;
+  color: #3f389c;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  transition: color 450ms ease;
+}
+.card__link-change:hover {
+  color: #7a6fd8;
 }
 .card__plan-info {
   margin: 0 0 0 20px;
@@ -64,10 +93,16 @@
 .card__plan-name {
   margin: 0;
   padding: 0;
+  color: #1c2d4b;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
 }
 .card__plan-price {
-  margin: 0;
+  margin: 5px 0 0 0;
   padding: 0;
+  color: #788395;
+  font-size: 14px;
 }
 .card__button {
   padding: 10px;
@@ -77,4 +112,53 @@
   border: none;
   background-color: #382ae1;
   color: white;
+  box-shadow: 1px 1px 1px 1px #d6d4ff;
+  cursor: pointer;
+  transition: background-color 450ms ease;
+  font-weight: 700;
+}
+.card__button:active {
+  transform: scale(0.99);
+}
+.card__button:hover {
+  background-color: #766cf1;
+}
+.card__link-cancel {
+  color: #666f7d;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  transition: color 450ms ease;
+}
+.card__link-cancel:hover {
+  color: #1b2540;
+}
+
+.attribution {
+  text-align: center;
+  font-family: "Noto sans", sans-serif;
+  margin: 15px;
+}
+@media screen and (max-width: 627px) {
+  .card {
+    max-width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  .card__button {
+    font-size: 15px;
+  }
+  .card__plan-name {
+    font-size: 11px;
+  }
+  .card__plan-price {
+    font-size: 11px;
+  }
+  .card__link-change {
+    font-size: 11px;
+  }
+  .card__link-cancel {
+    font-size: 14px;
+  }
 }
