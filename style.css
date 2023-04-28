@@ -1,11 +1,11 @@
 .page {
-  width: 100%;
-  height: 100%;
-  background-color: #e0e8ff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(225, 100%, 94%);
   padding: 0;
   margin: 0;
-  padding-top: 50px;
-  font-family: "Noto sans", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   position: relative;
   z-index: 2;
 }
@@ -15,21 +15,21 @@
   height: 100%;
   content: "";
   background: url(./images/pattern-background-desktop.svg) no-repeat;
-  background-position: top -50% left 0;
+  background-size: contain;
   top: 0;
   left: 0;
   z-index: -1;
 }
 .card {
-  max-width: 350px;
+  max-width: 390px;
   height: auto;
   background-color: #fff;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 2px 1px 18px 1px #0000001f;
+  box-shadow: 4px 10px 20px 5px hsl(225deg 9.19% 46.35% / 13%);
 }
 .card__image {
   max-width: 100%;
@@ -48,18 +48,20 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  color: #1c2d4b;
+  color: hsl(223, 47%, 23%);
   font-size: 24px;
+  font-weight: 900;
 }
 .card__description {
-  text-align: center;
+  /* text-align: center; */
   margin: 0 0 0 0;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
-  color: #788395;
-  font-size: 13px;
-  line-height: 1.6;
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 500;
 }
 .card__plan {
   margin: 0;
@@ -68,7 +70,7 @@
   display: flex;
   grid-auto-flow: column;
   align-items: center;
-  background-color: #f8f9fe;
+  background-color: hsl(225, 100%, 98%);
   border-radius: 10px;
 }
 .card__plan-icon {
@@ -78,14 +80,16 @@
 }
 .card__link-change {
   margin-left: auto;
-  color: #3f389c;
+  color: hsl(245, 75%, 52%);
   font-weight: 700;
   font-style: normal;
-  font-size: 12px;
+  font-size: 16px;
   transition: color 450ms ease;
+  font-weight: 700;
 }
 .card__link-change:hover {
-  color: #7a6fd8;
+  color: hsla(245, 75%, 52%, 0.8);
+  /* color: hsl(245, 58%, 65%); */
 }
 .card__plan-info {
   margin: 0 0 0 20px;
@@ -93,7 +97,7 @@
 .card__plan-name {
   margin: 0;
   padding: 0;
-  color: #1c2d4b;
+  color: hsl(223, 47%, 23%);
   font-weight: 700;
   font-style: normal;
   font-size: 14px;
@@ -101,7 +105,7 @@
 .card__plan-price {
   margin: 5px 0 0 0;
   padding: 0;
-  color: #788395;
+  color: hsl(224, 23%, 55%);
   font-size: 14px;
 }
 .card__button {
@@ -110,9 +114,9 @@
   margin: 20px 0 0 0;
   width: 100%;
   border: none;
-  background-color: #382ae1;
+  background-color: hsl(245, 75%, 52%);
   color: white;
-  box-shadow: 1px 1px 1px 1px #d6d4ff;
+  box-shadow: 1px 20px 20px 1px hsl(225, 100%, 94%);
   cursor: pointer;
   transition: background-color 450ms ease;
   font-weight: 700;
@@ -121,10 +125,10 @@
   transform: scale(0.99);
 }
 .card__button:hover {
-  background-color: #766cf1;
+  background-color: hsla(245, 75%, 52%, 0.8);
 }
 .card__link-cancel {
-  color: #666f7d;
+  color: hsl(224, 23%, 55%);
   margin-top: 10px;
   font-size: 12px;
   font-weight: 700;
@@ -133,7 +137,7 @@
   transition: color 450ms ease;
 }
 .card__link-cancel:hover {
-  color: #1b2540;
+  color: hsl(223, 47%, 23%);
 }
 
 .attribution {
@@ -141,7 +145,7 @@
   font-family: "Noto sans", sans-serif;
   margin: 15px;
 }
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 375px) {
   .card {
     max-width: calc(100% - 40px);
     margin: 0 20px;
