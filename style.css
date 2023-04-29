@@ -16,8 +16,11 @@
   content: "";
   background: url(./images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
 }
 .card {
